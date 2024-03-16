@@ -32,3 +32,11 @@ Once you have done that, Git now knows about your remote repository. You can the
 git push -u origin master
 
 original link - https://stackoverflow.com/questions/12799719/how-to-upload-a-project-to-github
+
+
+If the problem is "main and master are entirely different commit histories.", the following will work
+
+git checkout master   
+git branch main master -f    
+git checkout main  
+git push origin main -f 
